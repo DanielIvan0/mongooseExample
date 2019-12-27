@@ -1,0 +1,29 @@
+<form action="/" method="post">
+  <p>
+    <label for="name">
+      Name: <input type="text" placeholder="Daniel Iván" value="Jacinto" name="name" id="name" autofocus>
+    </label>
+  </p>
+  <p>
+    <label for="lastName">
+      Last name: <input type="text" placeholder="Salado Torres" value="Salado" name="lastName" id="lastName">
+    </label>
+  </p>
+  <p>
+    <label for="updateName">
+      The new name: <input type="text" placeholder="Dany" value="Jacin" name="updateName" id="updateName">
+    </label>
+  </p>
+  <p>
+    <label for="updateLastName">
+      The new last name: <input type="text" placeholder="Salado" value="Salado Balderrama" name="updateLastName" id="updateLastName">
+    </label>
+  </p>
+  <input type="submit" name="addRecord" value="Add">
+  <input type="submit" name="deleteRecord" value="Delete">
+  <input type="submit" name="updateRecord" value="Update">
+</form>
+<h1>All records in DB</h1>
+{{#each data as |userData|}}
+<p>{{userData.name}} {{userData.lastName}}</p>
+{{/each}}
